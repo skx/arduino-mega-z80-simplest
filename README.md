@@ -18,12 +18,16 @@ Create a Z80-object, and pass it handlers for:
 * Reading a byte from I/O address NN.
 * Writing byte NN to I/O address NN.
 
-The sample code should make usage obvious, but questions welcome.
+Once you've done that call `.Tick()`to run the processor regularly.
+
+The [sample code](arduino-mega-z80-simplest.ino) should demonstrate the usage in a clean fashion, but questions are welcome!
 
 
 ## TODO
 
-The code has been compile-tested only.  I'm still hazy on the I/O access, but we'll see ..
+The code has been compile-tested only.
+
+I'm still hazy on whether the I/O access will succeed, but we'll see ..
 
 
 ## Links
@@ -34,7 +38,7 @@ Sample Z80 code:
 
 Sample Z80 emulator:
 
-* [https://github.com/skx/z80-examples](https://github.com/skx/z80-examples).
+* [https://github.com/skx/z80emulater/](https://github.com/skx/z80emulater/).
 
 Blog posts on the topic:
 
