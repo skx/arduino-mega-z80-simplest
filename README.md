@@ -6,12 +6,14 @@ However the sample code mixes the actual Z80-usage with some unrelated things, s
 
 This repository aims to make the retro-shield easier to deal with, by abstracting the CPU-driving into a single standalone class.  Allowing you to use it in your arduino-sketch along with whatever else you wish to do.
 
-**TODO** Make a note here about the design choice of tick vs. interrupt driving.
+There are currently two pieces of sample-code for the Z80 retroshield, one uses the `loop()`-based approach this repository contains, the other uses a timer-function to drive the processor.  Using a timer is cleaner since it gives you more speed and predictability, however the execution becomes more complex because you can't do things like invoke `Serial.read()`/`Serial.write()` inside an interrupt-handler - though you can disable the time for the duration of your "stuff".
+
+In short running things in `loop()` is more predictable, but slower.
 
 
 ## Overview
 
-Create a Z80-object, and pass it handlers for:
+Create a `Z80` object, and pass it handlers for:
 
 * Reading a byte of RAM from address XXX.
 * Writing byte NN to address XXX of RAM.
@@ -32,14 +34,15 @@ I'm still hazy on whether the I/O access will succeed, but we'll see ..
 
 ## Links
 
-Sample Z80 code:
+The retroshield itself:
 
-* [https://github.com/skx/z80-examples](https://github.com/skx/z80-examples)
+* [http://www.8bitforce.com/projects/retroshield/](http://www.8bitforce.com/projects/retroshield/)
 
-Sample Z80 emulator:
+Now some Z80 links
 
-* [https://github.com/skx/z80emulater/](https://github.com/skx/z80emulater/).
-
-Blog posts on the topic:
-
-* [https://blog.steve.fi/tags/z80/](https://blog.steve.fi/tags/z80/)
+* Sample Z80 code:
+  * [https://github.com/skx/z80-examples](https://github.com/skx/z80-examples)
+* Sample Z80 emulator:
+  * [https://github.com/skx/z80emulater/](https://github.com/skx/z80emulater/).
+* My blog posts on the topic of creating Z80-based computer:
+  * [https://blog.steve.fi/tags/z80/](https://blog.steve.fi/tags/z80/)
