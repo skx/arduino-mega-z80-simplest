@@ -25,14 +25,15 @@ Once you've done that call `.Tick()`to run the processor regularly.
 The [sample code](arduino-mega-z80-simplest.ino) should demonstrate the usage in a clean fashion, but questions are welcome!
 
 
-## TODO
+## Arduino Library
 
-The code has been compile-tested only.
+This repository contains a useful standalone demo, but for _real_ usage you should probably look at the repository here:
 
-I'm still hazy on whether the I/O access will succeed, but we'll see ..
+* https://github.com/skx/z80retroshield
 
+The z80retroshield library can be installed via the Arduino IDE, and comes complete with examples, documentation and a sane upgrade-path.
 
-## Links
+## Other Links
 
 The retroshield itself:
 
